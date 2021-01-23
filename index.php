@@ -1,11 +1,13 @@
 <?php
 require_once ("config.php");
+	//le formulaire d'inscription a été saisi
  	if(isset($_POST["regist"])){
 
  		$requete = $bd->prepare('select nom, prenom, contact from users where contact = :contact');
     	$requete->bindValue(':contact', $_POST["numero"]);
     	$requete->execute();
         $tab = $requete->fetch(PDO::FETCH_ASSOC);
+        //mail déjà existant dans la base de données
         if($tab["contact"] === $_POST["numero"]){
         	echo "Ces coordonées sont déjà existantes, veuillez rentrer un autre mail. <a href='index.php'>Inscrivez-vous à nouveau</a>";
    		}else{
@@ -29,15 +31,18 @@ require_once ("config.php");
 	    	}
 	    }
 
+	//le formulaire de connexion a été saisi
     }else if(isset($_POST["connexion"])){
     	$mail = $_POST["mail"];
     	$requete = $bd->prepare('select contact, password from users where contact = :numero ');
     	$requete->bindValue(':numero', $mail);
         $requete->execute();
         $tab = $requete->fetch(PDO::FETCH_ASSOC);
+        //vérifier que le mot de passe est le même que dans la base de données
         if(password_verify($_POST["mdp"], $tab["password"])){
         	echo "<h1>Vous êtes connecté</h1> ";
    		}else{
+   			//redirection vers la page principale si coordonnées incorrectes
     		header("Location: index.php");
     	}
  	}else{
