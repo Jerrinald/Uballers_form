@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	//gérer les conditions pour le formulaire de connexion
 	$( "#login" ).submit(function( event ) {
 		var n = 0;
 	  	conn=document.forms['login'];
@@ -6,12 +7,15 @@ $(document).ready(function(){
 	  	var mdp=conn.elements['mdp'].value;
 
 	  	while (n < 2){
+	  		//gestion du champ du mail/mobile
 	  		if(conn.elements[n].id == "mail"){
+	  			//champ vide
 			    if(mail == "") {
 			    	alert("Saisissez le mail");
 				    return false;
 			    }
 			    else if(mail != "") {
+			    	//non conforme au mail
 				    if(!mail.includes("@")){
 				    	alert("Mail invalide");
 				    	return false;
@@ -20,10 +24,13 @@ $(document).ready(function(){
 				    	console.log(document.forms["login"].elements[n].id);
 				    }
 				}
+			//gestion du champ du mot de passe	
 			}else if(document.forms["login"].elements[n].id == "mdp"){
+				//champ vide
 				if(mdp == "") {
 			    	alert("Saisissez le mot de passe");
 					return false;
+				//on retourne vrai car tous les champs ont été vérifiés et sont correctes
 			    }else{
 			    	return true;
 			    }
@@ -32,7 +39,7 @@ $(document).ready(function(){
 		}
 
 	});
-
+	//gérer les conditions pour les formulaire d'inscription
 	$( "#registration" ).submit(function( event ) {
 		var n = 0;
 	  	regist=document.forms['registration'];
@@ -147,6 +154,7 @@ $(document).ready(function(){
 				if(genre == "") {
 					alert("Saisissez le sexe");
 			    	return false;
+			    //on retourne vrai car tous les champs ont été vérifiés et sont correctes
 				}else{
 					return true;
 				}
@@ -157,3 +165,4 @@ $(document).ready(function(){
 
 	});
 });
+
