@@ -1,0 +1,202 @@
+*{
+	font-family:"Trebuchet MS", Helvetica, Arial, sans serif;
+	color:white;
+	font-size:14px;
+	padding:0px;
+	margin:0px;
+	border:0px;
+}
+
+body{
+	background:#EEE8CD;
+     background: linear-gradient(rgba(255, 255, 255), 70%, rgba(194, 229, 232));
+     height: 657px;
+    }
+
+p{
+	font-size:14px;
+	line-height:22px;
+}
+
+::placeholder {
+  padding-left: 6px;
+}
+
+h1{
+	font-size:26px;
+	font-weight:bold;
+	color: black;
+}
+
+h2{
+	font-weight: bold;
+	font-size: 20px;
+	color: black;
+}
+
+h3{
+	font-weight: bold;
+	font-size: 17px;
+	color: black;
+}
+
+a{
+	color:blue;
+	width: 10px;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+div{
+	position:relative;
+}
+
+
+.in{
+	margin:auto;
+	margin-left: 350px;
+}
+
+#menu{
+	height:90px;
+	top: 0px;
+	background-color: #3B5998;
+}
+
+#menu .in .mail{
+	font-size: 19px;
+	top: 15px;
+	margin-left: 105px;
+	height:20px;
+}
+
+#menu .in .mail input{
+	height: 25px;
+	color: black;
+}
+
+#menu .in .mdp input{
+	height: 25px;
+	color: black;
+} 
+
+#menu .in .mdp {
+	font-size: 19px;
+	margin-left: 300px;
+	top: -5px;
+}
+
+.button{
+	margin-left: 490px;
+	top: -31px;
+}
+
+.button input{
+	height: 28px;
+	padding: 0 20px;
+	background-color: #3B5998;
+    
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -1px -1px 1px rgba(0, 0, 0, .6);
+}
+
+.button input:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+#register {
+	height: 120px;
+	width: 800px;
+	left: 400px;
+	margin-top : 44px;
+	color: black;
+	
+}
+
+#register .name input {
+		color: black;
+      margin-left: 15px;
+      height: 28px;
+      width: 200px;
+      border:#ADD8E6 1px solid;
+}
+
+#register .num input {
+	color: black;
+	margin-top: 13px;
+	margin-left: 14px;
+	  height: 28px;
+	  width: 418px;
+	  border:#ADD8E6 1px solid;
+}
+
+
+#register .date {
+	margin-top: 30px;
+	left: 2px;
+	display: block;
+
+}
+
+#register .date input{
+	margin-left: 5px;
+	color: black;
+	width: 59px;
+	height: 25px;
+	text-align: center;
+	border:#ADD8E6 1px solid;
+}
+
+#register .date a{
+	font-size: 0.70em;
+	margin-left: 5px;
+	margin-top: 78px;
+}
+
+#register .genre{
+	color: black;
+	font-size: 18px;
+	width: 478px;
+}
+
+#register .genre input{
+	margin-left: 6px;
+	width: 22px;
+}
+
+#register .condition{
+	margin-top: 15px;
+}
+
+#register .condition p{
+	color: #808080;
+	width: 320px;
+	font-size: 0.70em;
+	line-height:14px;
+}
+
+#register .condition input{
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 15px;
+	width: 200px;
+    line-height: 2.5;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgba(107, 142, 35, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 3px 3px 3px rgba(255, 255, 255, .6),
+                inset -2px -1px -3px rgba(0, 0, 0, .6);
+}
+
+
+
